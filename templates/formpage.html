@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Page</title>
+    <style>
+
+    table, td {
+        border: 1px solid #d4d4d4;
+        border-collapse: collapse;
+        vertical-align: top;
+    }
+
+    table tr td:first-child{
+        text-align: right;
+    }
+    table{
+    margin: auto;
+    }
+</style>
+</head>
+<body>
+
+<form method="POST" action="/feedback">
+            <table>
+        <tr>
+            <td>First name:</td> <td><input type="text" name="firstname" value="Mickey"></td>
+        </tr>
+        <tr>
+            <td>Last name:</td>
+            <td><input type="text" name="lastname" value="Mouse"></td>
+        </tr>
+        <tr>
+            <td>E-mail:</td>
+            <td><input type="email" name="email" value="blogs@hotmail.com"></td>
+        </tr>
+        <tr>
+            <td>Birthday (month and year):</td>
+            <td><input type="month" name="bdaymonth" value="December 1900"></td>
+        </tr>
+        <tr>
+            <td>Select your favorite color:</td>
+            <td><input type="color" name="favcolor" value="#ff0000"></td>
+        </tr>
+        <tr>
+            <td>How have you heard about us?</td>
+            <td><textarea name="message" rows="4" cols="30">From all of my friends</textarea></td>
+        </tr>
+        <tr>
+            <td>What are your interests?</td>
+            <td>
+            <input type="checkbox" name="n1" value="Snorkelling" checked>Snorkelling<br>
+            <input type="checkbox" name="n2" value="Beaches" checked>Beaches<br>
+            <input type="checkbox" name="n3" value="Great Food" checked>Great Food<br>
+            <input type="checkbox" name="n4" value="Nature">Nature<br>
+            <input type="checkbox" name="n5" value="Walking" checked>Walking<br>
+        </td>
+        </tr>
+        <tr>
+            <td>What is your age range?</td>
+            <td>
+            <input type="radio" name="age" value="under 18" checked> Less than 18<br>
+            <input type="radio" name="age" value="18 - 30"> 18 - 30<br>
+            <input type="radio" name="age" value="31-40"> 31-40<br>
+            <input type="radio" name="age" value="18 - 30"> 41 - 55<br>
+            <input type="radio" name="age" value="Older than 55"> Older than 55
+        </td>
+        </tr>
+        <tr>
+            <td>  </td>
+            <td style="text-align: right;"><input type="reset"> <input type="submit" value="Submit"></td>
+        </tr>
+        </table>
+          </form>
+
+
+</body>
+</html>

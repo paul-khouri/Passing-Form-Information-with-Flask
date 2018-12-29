@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback Page</title>
+
+</head>
+<body>
+<h1>You have submitted the following information:</h1>
+<table>
+    <tr><td>{{ "First Name:"}} </td><td>{{result["firstname"] }}</td></tr>
+     <tr><td>{{ "Last Name:"}} </td><td>{{result["lastname"] }}</td></tr>
+     <tr><td>{{ "Email:"}} </td><td>{{result["email"] }}</td></tr>
+    <tr><td>{{ "Birth month and year:"}} </td><td>{{result["bdaymonth"] }}</td></tr>
+    <tr><td>{{ "How you found us:"}} </td><td>{{result["message"] }}</td></tr>
+    <tr><td>{{ "You like:"}} </td><td>{{result["n1"] }} , {{result["n2"] }} ,
+        {{result["n3"] }} , {{result["n4"] }} , {{result["n5"] }}</td></tr>
+    <tr><td>{{ "Your age range:"}} </td><td>{{result["age"] }}</td></tr>
+</table>
+{{result["firstname"] }}
+<br>
+{{ result["n4"] }}
+<br>
+{% if result["n4"] == "Nature" %}
+{{"You like nature"}}
+{% else %}
+{{"You do not like nature"}}
+{% endif %}
+<br>
+{% for x in result %}
+{{ x }}
+{% endfor %}
+<br>
+{% for x in result %}
+{{ result[x] }}
+{% endfor %}
+<table>
+{% for x, y in result.items() %}
+<tr>
+    <td> {{x}} </td> <td> {{y}} </td>
+</tr>
+{% endfor %}
+    </table>
+
+<table>
+{% for key, value in result.items() %}
+<tr>
+    <td> {{key}} </td> <td> {{value}} </td>
+</tr>
+{% endfor %}
+    </table>
+
+</body>
+</html>
